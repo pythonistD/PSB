@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src='{% static 'img.png' %}' alt="PSB" class="rounded mx-auto d-block logo-img-size-index">
+            </div>
+            <div class="col-12">
+                <h4 class="text-light text-center" id="heading-index">Набор в Бюро Общественной Безопасности</h4>
+                <div class="d-flex flex-row justify-content-center">
+                <p class="text-light" id="index-p">Министерство Благосостояния Японии проводит набор в Бюро обцественной безопасности на позицию Аналитика.
+                    В ваши компетенции будет входить: координация агентов БОБ, набор и мониторинг кадров.
+                </p>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                     <p class="text-light index-p">Если Вас заинтересовала
+                    данная должность, вы можете попробовать свои силы в симуляции рабочего дня Аналитика, в случае
+                    успешно прохождения данной симуляции у вас появиться возможность получить должность Аналитика.</p>
+                </div>
+                <div class="d-flex flex-row justify-content-center" id="index-div-btn">
+                    <a class="btn btn-success align-items-center" id="btn-accept" href="{% url 'register' %}">Я согласен, участвую</a>
+                </div>
+                <figure class="text-end" id="index-quote">
+                    <blockquote class="blockquote text-light">
+                        <p>Никто не может нырнуть в бездну и вынырнуть прежним.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Шинья Когами
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

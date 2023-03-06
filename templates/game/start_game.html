@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <section>
+        <div class="container text-light">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="container">
+                            <h3>Инспекторы</h3>
+                                <div class="overflow-auto main-scroll-bar">
+                                    <table class="table table-dark table-striped text-light table-bordered" id="start-game-ins-table">
+                                        <thead>
+                                            <tr>
+                                                <td>ID</td>
+                                                <td scope="col">
+                                                    First Name
+                                                </td>
+                                                <td scope="col">Last name</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-group-divider" id="start-game-tbody-ins">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                        <div class="container">
+                            <h3>Исполнители</h3>
+                             <div class="overflow-auto main-scroll-bar">
+                                    <table class="table table-dark table-striped text-light table-bordered" id="start-game-perf-table">
+                                        <thead>
+                                            <tr>
+                                                <td>ID</td>
+                                                <td scope="col">
+                                                    First Name
+                                                </td>
+                                                <td scope="col">Last name</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-group-divider" id="start-game-tbody-perf">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                        <div class="container main-scroll-bar" id="start-page-inf-wrapper">
+                            <h3>Информация</h3>
+                            <div class="d-flex flex-column">
+                                <div class="d-flex flex-row justify-content-cente">
+                                    <img src="{% static 'img_1.png' %}" alt="anonym person image" id="anonym_p_image_start_game">
+                                </div>
+                                <div id="start-game-inf">
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="start-bt">
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <h3>Жители</h3>
+                            <div class="overflow-auto main-scroll-bar" id="start-game-citizen-scbr">
+{#                                    {% for citizen in object_list %}#}
+{#                                        <p>{{ citizen.first_name }} {{ citizen.second_name }}</p>#}
+{#                                    {% endfor %}#}
+                                <table class="table table-dark table-striped text-light table-bordered" id="start-game-citizen-table">
+                                    <thead>
+                                        <tr>
+                                            <td>ID</td>
+                                            <td scope="col">
+                                                <div class="form-check">
+                                                      <label class="form-check-label" for="flexCheckDefault">
+                                                        First Name
+                                                      </label>
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                </div>
+                                            </td>
+                                            <td scope="col">Last name</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-group-divider" id="start-game-tbody-citizen">
+
+                                    </tbody>
+                                </table>
+
+                                    
+                            </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row-reverse">
+                                <a class="btn bg-light" id="start-game-btn-submit-stack">Подтвердить состав подразделения</a>
+                            </div>
+                            <div class="d-flex flex-row-reverse">
+                                <a class="btn bg-light" href="{% url 'game-page' %}">Начать игру</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'my_js/main.js' %}"></script>
+{% endblock %}

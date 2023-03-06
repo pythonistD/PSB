@@ -1,11 +1,31 @@
+{% extends 'base.html' %}
 {% block content %}
-<h3>Login</h3>
-<br/><br/>
-<div class="form=group">
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-secondary">Login</button>
-    </form>
-</div>
+<section>
+    <div class="container text-light">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-light">Login</h3>
+                    <br/><br/>
+                    <div class="form=group text-light">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="username_input" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username_input" name="username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password_input" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password_input" name="password">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button class="btn btn-success">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
 {% endblock %}

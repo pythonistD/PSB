@@ -1,0 +1,93 @@
+@font-face { font-family: rubik-glitch;
+			 src: url('RubikGlitch-Regular.ttf'); }
+.logo-img-size-index{
+  height: 300px;
+  width: 300px;
+}
+:root{
+    --color1:#000000;
+    --color2:#38d9be;
+}
+section{
+    padding: 50px 0;
+    height: inherit;
+}
+#heading-index{
+    padding: 30px 0 20px 0;
+}
+body{
+    background: var(--color1);
+    font-family: rubik-glitch, sans-serif;
+}
+#p-index{
+    flex-basis: 500px;
+}
+#index-div-btn{
+    padding-top: 20px;
+}
+#index-quote{
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.logo-img-size-main{
+    height: 200px;
+    width: 200px;
+}
+.main-btns{
+    margin-top: 20px;
+}
+.main-scroll-bar{
+    height: 350px;
+}
+#start-bt{
+    margin-top: 60px;
+}
+#anonym_p_image_start_game{
+    height: 100px;
+    width: 100px;
+}
+#start-page-inf-wrapper{
+    background-color: #5c636a;
+}
+#start-game-inf{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+}
+#game-logo{
+    height: 100px;
+    width: 300px;
+}
+#arrested-img-container{
+    height: 100px;
+    width: 100px;
+}
+#arrested-img{
+    height: inherit;
+    width: available;
+}
+#start-game-btn-submit-stack{
+    margin-bottom: 20px;
+}
+#game-btn-submit-stack{
+    margin-top: 20px;
+}
+#typed{
+    font-size: large;
+    margin: 30px;
+}
+#game-btn-send-stack{
+    margin-top: 20px;
+}
+#arrests-counter-div{
+    margin-left: 20px;
+}
+.end-game{
+    padding: 20px;
+}
+.end-game-wr-c{
+    height: 100vh;
+}
+#end-game-center-al{
+    margin-top: 100px;
+}

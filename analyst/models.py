@@ -4,8 +4,8 @@ from django.contrib.auth.models import User, AbstractUser
 
 class Analyst(models.Model):
     analyst_id = models.AutoField(primary_key=True)
-    first_name = models.CharField(max_length=100)
-    second_name = models.CharField(max_length=100)
+    fk_user = models.OneToOneField(User, on_delete=models.CASCADE)
+    rank = models.TextField()
 
     class Meta:
         managed = False

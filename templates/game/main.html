@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <img src='{% static 'img.png' %}' alt="PSB" class="rounded mx-auto d-block logo-img-size-main">
+                </div>
+                <div class="col-12">
+                    <div class="d-flex flex-row justify-content-center main-btns">
+                        <a class="btn btn-light align-items-center" id="btn-accept" href="{% url 'start_game_page' %}">Новая игра</a>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center main-btns">
+                        <a class="btn btn-light align-items-center" id="btn-accept" href="#">Профиль</a>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center main-btns">
+                        <a class="btn btn-light align-items-center" id="btn-accept" href="{% url 'logout' %}">Выйти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

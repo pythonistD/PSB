@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section>
+    <div class="container-fluid">
+        <div class="row">
+                <div class="d-flex flex-row">
+                    <div class="col-4">
+                        <h1 class="text-light">PSYCHO-PASS</h1>
+{#                    <img src="https://www.seekpng.com/png/detail/354-3547822_pyscho-pass-logo-psycho-pass-logo-png.png" alt="Pyscho Pass Logo" id="game-logo">#}
+                    </div>
+        {#                <img src="{% static 'Psycho-pass.logo.svg.png' %}" alt="psycho-pass logo">#}
+                    <div class="col-4">
+                        <div class="d-flex flex-row">
+                            <div class="d-flex justify-content-center bg-light flex-row" id="arrested-img-container">
+                                <img src="{% static 'jail.png' %}" alt="arrested" id="arrested-img">
+                            </div>
+                            <div class="align-self-center" id="arrests-counter-div">
+                                <h1 class="text-light" id="arrests-counter">0</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                    <h3 class="text-light">Timer</h3>
+                        <div class="text-light" id="timer"></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <section>
+    <div class="container-fluid text-light">
+        <div class="row">
+            <div class="d-flex flex-row">
+                <div class="col-3">
+                    <div class="d-flex flex-column">
+                        <h3>Инспекторы</h3>
+                        <div class="container-fluid">
+                            <div class="overflow-auto main-scroll-bar">
+                                    <table class="table table-dark table-striped text-light table-bordered" id="game-ins-table">
+                                        <thead>
+                                            <tr>
+                                                <td>ID</td>
+                                                <td scope="col">
+                                                    First Name
+                                                </td>
+                                                <td scope="col">Last name</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-group-divider" id="game-tbody-ins">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                        <h3>Исполнители</h3>
+                        <div class="container-fluid">
+                            <div class="overflow-auto main-scroll-bar">
+                                    <table class="table table-dark table-striped text-light table-bordered" id="game-perf-table">
+                                        <thead>
+                                            <tr>
+                                                <td>ID</td>
+                                                <td scope="col">
+                                                    First Name
+                                                </td>
+                                                <td scope="col">Last name</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-group-divider" id="game-tbody-perf">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <a class="btn bg-light" id="game-btn-submit-stack">Подтвердить состав группы захвата</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="d-flex flex-column">
+                        <h3>Информация</h3>
+                        <div class="container-fluid">
+                            <div class="overflow-auto main-scroll-bar bg-secondary">
+                                <div class="container" id="game-inf-container">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Преступники</h3>
+                    <div class="container-fluid">
+                            <div class="overflow-auto main-scroll-bar">
+                                    <table class="table table-dark table-striped text-light table-bordered" id="game-criminal-table">
+                                        <thead>
+                                            <tr>
+                                                <td>ID</td>
+                                                <td scope="col">
+                                                    First Name
+                                                </td>
+                                                <td scope="col">Last name</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="table-group-divider" id="game-tbody-criminal">
+
+                                        </tbody>
+                                        <tfoot>
+
+                                        </tfoot>
+                                    </table>
+                                </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <a class="btn bg-light" id="game-btn-send-stack">Отправить группу захвата</a>
+                        </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex flex-column">
+                        <h3>Местоположение преступника</h3>
+                        <div class="container-fluid">
+                            <div class="overflow-auto main-scroll-bar bg-secondary">
+                                {{ map | safe }}
+
+
+                            </div>
+                        </div>
+                        <h3>Консоль</h3>
+                        <div class="container-fluid bg-secondary">
+                            <div class="overflow-auto main-scroll-bar" id="typed">
+
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row">
+                            <a class="btn bg-light" id="game-btn-end-game">Завершить игру</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    </section>
+<script src="{% static 'my_js/game.js' %}"></script>
+{% endblock %}
